@@ -323,8 +323,9 @@ ARCH		?=arm64
 # CROSS_COMPILE   ?= ../PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 
-CROSS_COMPILE=/home/grahame/toolchains/Topser2/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-
+# CROSS_COMPILE=/home/grahame/toolchains/Topser2/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+CROSS_COMPILE=/home/grahame/toolchains/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9-lineage-19.1/bin/aarch64-linux-android-
+ 
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -377,8 +378,10 @@ AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
 # CC              = $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/clang
 
-CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
+# CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
 
+
+CC=/home/grahame/toolchains/clang-r353983c/clang-r353983c1-master/bin/clang
 
 
 CPP		= $(CC) -E
@@ -502,9 +505,9 @@ ifeq ($(cc-name),clang)
 ifneq ($(CROSS_COMPILE),)
 # CLANG_TRIPLE    ?= $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/aarch64-linux-gnu-
 
-CLANG_TRIPLE=/home/grahame/toolchains/proton-clang-13-clang/bin/aarch64-linux-gnu-
+# CLANG_TRIPLE=/home/grahame/toolchains/proton-clang-13-clang/bin/aarch64-linux-gnu-
 
-
+CLANG_TRIPLE=aarch64-linux-gnu-
 
 CLANG_FLAGS	+= --target=$(notdir $(CLANG_TRIPLE:%-=%))
 ifeq ($(shell $(srctree)/scripts/clang-android.sh $(CC) $(CLANG_FLAGS)), y)
