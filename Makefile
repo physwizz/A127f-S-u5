@@ -324,8 +324,7 @@ ARCH		?=arm64
 
 
 # CROSS_COMPILE=/home/grahame/toolchains/Topser2/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-CROSS_COMPILE=/home/grahame/toolchains/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9-lineage-19.1/bin/aarch64-linux-android-
- 
+CROSS_COMPILE=/home/grahame/toolchains/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
