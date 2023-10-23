@@ -375,12 +375,7 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 # Make variables (CC, etc...)
 AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
-# CC              = $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/clang
-
-# CC=/home/grahame/toolchains/android_prebuilts_clang_host_linux-x86_clang-5484270-9.0/bin/clang
-
-
-CC=/home/grahame/toolchains/clang-r353983c/clang-r353983c1-master/bin/clang
+CC              = $(srctree)/toolchain/clang/host/linux-x86/clang-r353983c/bin/clang
 
 
 CPP		= $(CC) -E
